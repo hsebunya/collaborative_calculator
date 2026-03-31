@@ -29,5 +29,5 @@ jobs:
               flake8 calculator.py testcalculator.py --max-line-length=88 --extend-ignore==E203
       
       - name: run tests
-        if success()
+        if: success()
         run: pytest test_calculator.py
