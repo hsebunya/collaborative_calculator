@@ -19,6 +19,10 @@ def get_numbers():
     return numbers
 
 
+def add_numbers():
+    pass
+
+
 def main():
     """Main function to run the calculator."""
     print("=" * 50)
