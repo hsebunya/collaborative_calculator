@@ -30,6 +30,10 @@ def add_numbers(numbers):
     return sum(numbers)
 
 
+def multiply_numbers(numbers):
+    pass
+
+
 def main():
     """Main function to run the calculator."""
     print("=" * 50)

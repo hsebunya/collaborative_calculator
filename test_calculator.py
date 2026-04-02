@@ -3,7 +3,7 @@ unit tests for calculator functions
 """
 
 # import pytest
-from calculator import get_numbers, add_numbers
+from calculator import get_numbers, add_numbers, multiply_numbers
 from unittest.mock import patch
 
 
@@ -27,6 +27,27 @@ def test_add_numbers_single():
 def test_add_numbers_empty():
     """"Test addition with empty list."""
     assert add_numbers([]) == 0
+
+
+def test_multiply_numbers_postive():
+    """ Test multiplication with postive numbers"""
+    assert multiply_numbers([2, 3, 4]) == 24
+    assert multiply_numbers([5, 2]) == 10
+
+
+def test_multiply_numbers_with_zero():
+    """ Test multiplication with zero """
+    assert multiply_numbers([3, 0, 20]) == 0
+
+
+def test_multiply_numbers_single():
+    """Test multiplication with a single number """
+    assert multiply_numbers([3]) == 3
+
+
+def test_multiply_numbers_with_negative_numbers():
+    """Test multiplication with negatives """
+    assert multiply_numbers([3, -3, 1]) == -9
 
 
 @patch('builtins.input', side_effect=['5', '10', 'done'])
