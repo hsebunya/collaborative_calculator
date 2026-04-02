@@ -30,6 +30,20 @@ def add_numbers(numbers):
     return sum(numbers)
 
 
+def multiply_numbers(numbers):
+    """
+      Multiply all numbers in the list.
+        Args:
+        numbers(list): List of numbers to multiply
+        Returns:
+        float:product of all numbers
+    """
+    result = 1
+    for number in numbers:
+        result *= number
+    return result
+
+
 def main():
     """Main function to run the calculator."""
     print("=" * 50)
